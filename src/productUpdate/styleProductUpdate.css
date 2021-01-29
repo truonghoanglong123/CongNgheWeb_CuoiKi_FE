@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+nav{
+  /* background: #1b1b1b; */
+  background: #706f43;
+}
+nav:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+nav .logo{
+  float: left;
+  color: white;
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 70px;
+  padding-left: 60px;
+  cursor: pointer;
+}
+nav ul{
+  float: right;
+  margin-right: 40px;
+  list-style: none;
+  position: relative;
+}
+nav ul li{
+  float: left;
+  display: inline-block;
+  /* background: #1b1b1b; */
+  background:  #706f43;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: white;
+  line-height: 70px;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 8px 15px;
+}
+nav ul li a:hover{
+  color: cyan;
+  border-radius: 5px;
+  box-shadow:  0 0 5px #33ffff,
+               0 0 10px #66ffff;
+}
+nav ul ul li a:hover{
+  box-shadow: none;
+}
+nav ul ul{
+  position: absolute;
+  top: 90px;
+  border-top: 3px solid cyan;
+  opacity: 0;
+  visibility: hidden;
+  transition: top .3s;
+}
+nav ul ul ul{
+  border-top: none;
+}
+nav ul li:hover > ul{
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+nav ul ul li{
+  position: relative;
+  margin: 0px;
+  width: 150px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+nav ul ul li a{
+  line-height: 50px;
+}
+nav ul ul ul li{
+  position: relative;
+  top: -60px;
+  left: 150px;
+}
+
+.fa-plus{
+  font-size: 15px;
+  margin-left: 40px;
+}
+
+
+.content{
+  /* z-index: -1;
+  text-align: center; */
+}
+.form{
+  width: 500px;
+  background: #f1f1f1;
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 30px 40px;
+  box-sizing: border-box;
+  border-radius: 7px;
+  text-align: center;
+  box-shadow: 0 0 20px #000000b3;
+  font-family: "Montserrat",sans-serif;
+  margin-top: 20px;
+}
+.form h1{
+  margin-top: 0;
+  font-weight: 200;
+}
+.txtb{
+  /* border: 1px solid gray; */
+  margin: 8px 0;
+  border-radius: 8px;
+  margin-top: 20px;
+  display: flex;
+}
+.txtb label{
+  margin-right: 20px;
+  text-transform: uppercase;
+  flex: 1;
+}
+.txtb input{
+  border-radius: 5px;
+  width: 200px;
+  
+}
+button.btn.btn-primary {
+  background: rgb(100, 219, 89);
+  width: 90px;
+  height: 32px;
+  border-radius: 5px;
+  margin: 10px 10px 0 0;
+}
+button.btn.btn-primary a{
+  color: white;
+  text-decoration: none;
+}
+button.btn.btn-primary:hover{
+  opacity: 0.5;
+}
+button.btn.btn-add {
+  background: rgb(126, 75, 136);
+  width: 90px;
+  height: 32px;
+  border-radius: 5px;
+}
+button.btn.btn-add:hover{
+  opacity: 0.5;
+}
+button.btn.btn-add a{
+  color: white;
+  text-decoration: none;
+}
