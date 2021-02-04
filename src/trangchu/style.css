@@ -96,14 +96,14 @@ nav ul ul ul li{
 }
 
 
-.content{
+/* .content{
   z-index: -1;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   text-align: center;
-}
+} */
 header{
   font-size: 35px;
   font-weight: 600;
@@ -111,10 +111,15 @@ header{
 }
 
 
-
+.slide-image {
+  width: 100%;
+  height: calc(100vh - 54px - 85px);
+  object-fit: contain;
+}
 .content{
     width: 100%;
-    height: 550px;
+    /* height: 550px; */
+    height: calc(100vh - 54px - 85px);
     background: #bee2e2;
 }
 .footer{
@@ -122,6 +127,5 @@ header{
     height: 52px;
     line-height: 52px;
     background: #a3df9c;
-    margin-top: 534px;
     text-align: center;
 }

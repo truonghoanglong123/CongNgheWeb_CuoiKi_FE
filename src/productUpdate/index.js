@@ -40,7 +40,7 @@ function Product() {
 
   return (
     <>
-      <div className="container">
+      <div className="container-app">
         <nav>
         <div className="logo"><Link to="/">TLH</Link></div>
                     <label for="btn" class="icon">

@@ -26,7 +26,7 @@ function TableCategories({ items, checkUpdateSuccess, onDeleteSuccess, setCurren
     }
     return (
         <>
-            <div className="container">
+            <div className="container-app">
                 <nav>
                     <div className="logo">
 
