@@ -27,6 +27,11 @@ function Order() {
 
     }
 
+    function handleHuy(e) {
+        e.preventDefault();
+        history.goBack();
+      }
+
     useEffect(() => {
         setLoading(true)
         CRUD.getOneOrder(id)
@@ -44,12 +49,12 @@ function Order() {
         <>
             <div className="container-app">
                 <nav>
-                <div className="logo"><Link to="/">TLH</Link></div>
+                    <div className="logo"><Link to="/">TLH</Link></div>
                     <label for="btn" class="icon">
                         <span className="fa fa-bars"></span>
                     </label>
                     <ul>
-                    <li>
+                        <li>
                             <Link to="/customer">Customers</Link>
                         </li>
                         <li>
@@ -91,21 +96,25 @@ function Order() {
                                         <input type="text" name="EmployeeID" value={postData.EmployeeID} onChange={handleChangeData} placeholder="EmployeeID"></input>
                                     </div>
                                     <>
-                                    <div className="txtb">
-                                        <label for="">OrderDate:</label>
-                                        <input type="text" name="OrderDate" value={postData.OrderDate} onChange={handleChangeData} placeholder="OrderDate"></input>
-                                    </div>
-                                    <>
-                                    <div className="txtb">
-                                        <label for="">ShipperID:</label>
-                                        <input type="text" name="ShipperID" value={postData.ShipperID} onChange={handleChangeData} placeholder="ShipperID"></input>
-                                    </div>
-                                    
+                                        <div className="txtb">
+                                            <label for="">OrderDate:</label>
+                                            <input type="text" name="OrderDate" value={postData.OrderDate} onChange={handleChangeData} placeholder="OrderDate"></input>
+                                        </div>
                                         <>
-                                            <button className="btn btn-primary" name="btnSubmit" value="Submit" onClick={handleSubmit}><i class="fas fa-tools"></i>Submit</button>
-                                                
+                                            <div className="txtb">
+                                                <label for="">ShipperID:</label>
+                                                <input type="text" name="ShipperID" value={postData.ShipperID} onChange={handleChangeData} placeholder="ShipperID"></input>
+                                            </div>
+
+                                            <>
+                                                <button className="btn btn-primary" name="btnSubmit" value="Submit" onClick={handleSubmit}><i class="fas fa-tools"></i>Submit</button>
+
+                                            </>
+                                            <>
+                                                <button className="btn btn-primary" name="btnHuy" value="Submit" onClick={handleHuy}><i class="fas fa-tools"></i>Cancel</button>
+
+                                            </>
                                         </>
-                                    </>
                                     </>
                                 </>
                             </>

@@ -27,6 +27,11 @@ function OrderDetail() {
 
     }
 
+    function handleHuy(e) {
+        e.preventDefault();
+        history.goBack();
+    }
+
     useEffect(() => {
         setLoading(true)
         CRUD.getOneOrderDetail(id)
@@ -44,12 +49,12 @@ function OrderDetail() {
         <>
             <div className="container-app">
                 <nav>
-                <div className="logo"><Link to="/">TLH</Link></div>
+                    <div className="logo"><Link to="/">TLH</Link></div>
                     <label for="btn" class="icon">
                         <span className="fa fa-bars"></span>
                     </label>
                     <ul>
-                    <li>
+                        <li>
                             <Link to="/customer">Customers</Link>
                         </li>
                         <li>
@@ -91,14 +96,18 @@ function OrderDetail() {
                                         <input type="text" name="ProductID" value={postData.ProductID} onChange={handleChangeData} placeholder="ProductID"></input>
                                     </div>
                                     <>
-                                    <div className="txtb">
-                                        <label for="">Quantity:</label>
-                                        <input type="text" name="Quantity" value={postData.Quantity} onChange={handleChangeData} placeholder="Quantity"></input>
-                                    </div>
-                                    
+                                        <div className="txtb">
+                                            <label for="">Quantity:</label>
+                                            <input type="text" name="Quantity" value={postData.Quantity} onChange={handleChangeData} placeholder="Quantity"></input>
+                                        </div>
+
                                         <>
                                             <button className="btn btn-primary" name="btnSubmit" value="Submit" onClick={handleSubmit}><i class="fas fa-tools"></i>Submit</button>
-                                                
+
+                                        </>
+                                        <>
+                                            <button className="btn btn-primary" name="btnHuy" value="Submit" onClick={handleHuy}><i class="fas fa-tools"></i>Cancel</button>
+
                                         </>
 
                                     </>

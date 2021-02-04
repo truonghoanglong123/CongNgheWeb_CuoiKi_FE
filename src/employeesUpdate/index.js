@@ -27,6 +27,11 @@ function Employees() {
 
     }
 
+    function handleHuy(e) {
+        e.preventDefault();
+        history.goBack();
+    }
+
     useEffect(() => {
         setLoading(true)
         CRUD.getOneEmployees(id)
@@ -44,12 +49,12 @@ function Employees() {
         <>
             <div className="container-app">
                 <nav>
-                <div className="logo"><Link to="/">TLH</Link></div>
+                    <div className="logo"><Link to="/">TLH</Link></div>
                     <label for="btn" class="icon">
                         <span className="fa fa-bars"></span>
                     </label>
                     <ul>
-                    <li>
+                        <li>
                             <Link to="/customer">Customers</Link>
                         </li>
                         <li>
@@ -91,26 +96,30 @@ function Employees() {
                                         <input type="text" name="FirstName" value={postData.FirstName} onChange={handleChangeData} placeholder="FirstName"></input>
                                     </div>
                                     <>
-                                    <div className="txtb">
-                                        <label for="">BirthDate:</label>
-                                        <input type="text" name="BirthDate" value={postData.BirthDate} onChange={handleChangeData} placeholder="BirthDate"></input>
-                                    </div>
-                                    <>
-                                    <div className="txtb">
-                                        <label for="">Photo:</label>
-                                        <input type="text" name="Photo" value={postData.Photo} onChange={handleChangeData} placeholder="Photo"></input>
-                                    </div>
-                                    <>
-                                    <div className="txtb">
-                                        <label for="">Notes:</label>
-                                        <input type="text" name="Notes" value={postData.Notes} onChange={handleChangeData} placeholder="Notes"></input>
-                                    </div>
+                                        <div className="txtb">
+                                            <label for="">BirthDate:</label>
+                                            <input type="text" name="BirthDate" value={postData.BirthDate} onChange={handleChangeData} placeholder="BirthDate"></input>
+                                        </div>
                                         <>
-                                            <button className="btn btn-primary" name="btnSubmit" value="Submit" onClick={handleSubmit}><i class="fas fa-tools"></i>Submit</button>
-                                                
+                                            <div className="txtb">
+                                                <label for="">Photo:</label>
+                                                <input type="text" name="Photo" value={postData.Photo} onChange={handleChangeData} placeholder="Photo"></input>
+                                            </div>
+                                            <>
+                                                <div className="txtb">
+                                                    <label for="">Notes:</label>
+                                                    <input type="text" name="Notes" value={postData.Notes} onChange={handleChangeData} placeholder="Notes"></input>
+                                                </div>
+                                                <>
+                                                    <button className="btn btn-primary" name="btnSubmit" value="Submit" onClick={handleSubmit}><i class="fas fa-tools"></i>Submit</button>
+
+                                                </>
+                                                <>
+                                                    <button className="btn btn-primary" name="btnHuy" value="Submit" onClick={handleHuy}><i class="fas fa-tools"></i>Cancel</button>
+
+                                                </>
+                                            </>
                                         </>
-                                    </>
-                                    </>
                                     </>
                                 </>
                             </>
